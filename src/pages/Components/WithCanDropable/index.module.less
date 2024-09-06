@@ -1,0 +1,18 @@
+.drag-enter{
+  &:not(.delete-item) {
+    background-color: gray;
+  }
+
+  &.delete-item {
+    background-color: red;
+    position: relative;
+    &::before{
+      content: '删除';
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      font-size: 40px;
+    }
+  }
+}
